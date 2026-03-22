@@ -1,0 +1,44 @@
+{
+  "name": "AnalysisHistory",
+  "type": "object",
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "description": "Ticker symbol analyzed"
+    },
+    "asset_type": {
+      "type": "string",
+      "enum": [
+        "stock",
+        "option",
+        "crypto",
+        "etf",
+        "forex"
+      ]
+    },
+    "analysis_data": {
+      "type": "string",
+      "description": "JSON string with full analysis results"
+    },
+    "signal": {
+      "type": "string",
+      "enum": [
+        "strong_buy",
+        "buy",
+        "hold",
+        "sell",
+        "strong_sell"
+      ],
+      "description": "Overall signal recommendation"
+    },
+    "score": {
+      "type": "number",
+      "description": "Score from 0-100"
+    }
+  },
+  "required": [
+    "symbol",
+    "signal",
+    "score"
+  ]
+}
