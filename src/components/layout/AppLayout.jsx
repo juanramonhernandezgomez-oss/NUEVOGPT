@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { LayoutDashboard, Search, Star, History, TrendingUp, Activity, BookOpen } from "lucide-react";
+import { LayoutDashboard, Star, History, TrendingUp, Activity, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
