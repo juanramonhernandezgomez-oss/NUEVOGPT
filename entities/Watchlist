@@ -1,0 +1,47 @@
+{
+  "name": "Watchlist",
+  "type": "object",
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "description": "Ticker symbol (e.g. AAPL, BTC, TSLA)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the asset"
+    },
+    "asset_type": {
+      "type": "string",
+      "enum": [
+        "stock",
+        "option",
+        "crypto",
+        "etf",
+        "forex"
+      ],
+      "description": "Type of financial asset"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Personal notes about this asset"
+    },
+    "target_buy_price": {
+      "type": "number",
+      "description": "Target price to buy"
+    },
+    "target_sell_price": {
+      "type": "number",
+      "description": "Target price to sell"
+    },
+    "alert_enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether price alerts are enabled"
+    }
+  },
+  "required": [
+    "symbol",
+    "name",
+    "asset_type"
+  ]
+}
